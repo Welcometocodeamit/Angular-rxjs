@@ -1,0 +1,39 @@
+
+
+  <div class="demo-button-container">
+    <button mat-raised-button (click)="getData()" class="demo-button">Get Data</button>
+  </div>
+
+  <table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let element of dataSource">
+            <!-- <td>{{element}}</td> -->
+            <td>{{element.id}}</td>
+            <td>{{element.name}}</td>
+            <td>{{element.age}}</td>
+            <td>{{element.course}}</td>
+        </tr>
+    </tbody>
+    
+  </table>
+
+  <div *ngIf="errorM">
+    <p>{{errorM}}</p>
+  </div>
+
+  <div *ngIf="completeM">
+    <p>{{completeM}}</p>
+  </div>
+
+ 
+  
+  
